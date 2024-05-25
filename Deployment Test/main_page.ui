@@ -1,0 +1,2391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>701</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #111111;
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <widget class="QWidget" name="all_widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#111111
+}</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="2">
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="dashboard_stack">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget" native="true">
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+	color:white;
+	font-size:9pt;
+	background-color:#202020;
+	border-radius:25px;
+}
+QScrollBar:vertical{
+	width:9px;
+	margin: 0px 0px 0px 0px;
+	border:none;
+	background:none;
+	background-color: #202020;
+}
+QScrollBar:handle:vertical {
+	background-color: #8274FF;
+	border-radius:3px;
+	min-height:12px;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+	background: none;
+	height: 0px;
+	width: 0px;
+}
+QScrollBar:horizontal {
+	height:9px;
+	margin: 0px 0px 0px 0px;
+	border:none;
+	background:none;
+	background-color: #202020;
+}
+QScrollBar::handle:horizontal {
+	background-color: #8274FF;
+	border-radius:3px;
+	min-width:12px;
+}
+QScrollBar::add-line:horizonal,
+QScrollBar::sub-line:horizonal,
+QScrollBar::up-arrow:horizonal,
+QScrollBar::down-arrow:horizonal,
+QScrollBar::add-page:horizonal,
+QScrollBar::sub-page:horizonal {
+	background: none;
+	height: 0px;
+	width: 0px;
+}</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>820</width>
+                   <height>2250</height>
+                  </rect>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_8">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout_24">
+                    <item>
+                     <widget class="QWidget" name="population_widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>800</width>
+                        <height>200</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>800</width>
+                        <height>200</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QWidget{
+	background-color:#111111;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="age_widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QWidget{
+	background-color:#111111;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="sex_widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QWidget{
+	background-color:#111111;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="civil_status_widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QWidget{
+	background-color:#111111;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="edu_widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QWidget{
+	background-color:#111111;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="occupation_widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>800</width>
+                        <height>400</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QWidget{
+	background-color:#111111;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="table_stack">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QWidget" name="add_widget" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>800</width>
+               <height>225</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+	color:white;
+	font-size:9pt;
+	background-color:#202020;
+	border-radius:25px;
+}
+/* combo box*/
+QComboBox{
+	height:25px;
+	border:1px solid #6A6B6C;
+	border-radius:5px;
+	padding-left:5px;
+}
+QComboBox:drop-down{
+	border:0px;
+}
+QComboBox:down-arrow{
+	image: url(:/newPrefix/main_res/down-arrow_white.png);
+	width:12px;
+}
+QComboBox:hover{
+	border:2px solid #6A6B6C;
+	background-color:#3d3d3d;
+}
+QComboBox:focus{
+	border:1px solid #8274FF;
+}
+QComboBox:on{
+	border:1px solid #8274FF;
+}
+QComboBox QListView{
+	font-size:9px;
+	border:1px solid #8274FF;
+	padding:5px;
+	outline:none;
+	border-radius:5px;
+}
+QComboBox QListView:item{
+	padding-left:5px;
+	background-color: #FFFFFF;
+}
+QComboBox QListView:item:hover{
+	background-color: #202020;
+}
+QComboBox QScrollBar:vertical{
+	width:12px;
+	margin: 0px 0px 0px 0px;
+	border:none;
+	background:none;
+	background-color: #202020;
+}
+QComboBox QScrollBar:handle:vertical {
+	background-color: #8274FF;
+	border-radius:5px;
+	min-height:5px;
+}
+QComboBox QScrollBar::add-line:vertical,
+QComboBox QScrollBar::sub-line:vertical,
+QComboBox QScrollBar::up-arrow:vertical,
+QComboBox QScrollBar::down-arrow:vertical,
+QComboBox QScrollBar::add-page:vertical,
+QComboBox QScrollBar::sub-page:vertical {
+	background: none;
+	height: 0px;
+	width: 0px;
+}
+/* combo box*/
+/*qline*/
+QLineEdit{
+	height:25px;
+	border:1px solid #6A6B6C;
+	border-radius:5px;
+	font-size:9pt;
+	padding-left:5px;
+	max-width:150px;
+}
+QLineEdit:hover{
+	border:2px solid #6A6B6C;
+	background-color:#3d3d3d;
+}
+QLineEdit:focus{
+	border:1px solid #8274FF
+}
+/*qline*/
+/*qdate*/
+QDateEdit{
+	height:25px;
+	border:1px solid #6A6B6C;
+	border-radius:5px;
+	padding-left:5px;
+}
+QDateEdit:hover{
+	border:2px solid #6A6B6C;
+	background-color:#3d3d3d;
+}
+QDateEdit:focus{
+	border:1px solid #8274FF
+}
+QDateEdit::up-button, QDateEdit::down-button {
+	width: 0px;
+	height: 0px;
+	border: none;
+}
+QDateEdit:drop-down{
+	border:0px;
+}
+QDateEdit:down-arrow{
+	image: url(:/icons/down-arrow_white.png);
+	width:12px;
+}
+/*qdate*/
+/*qspin*/
+QSpinBox{
+	height:25px;
+	border:1px solid #6A6B6C;
+	border-radius:5px;
+	padding-left:5px;
+}
+QSpinBox:hover{
+	border:2px solid #6A6B6C;
+	background-color:#3d3d3d;
+}
+QSpinBox:focus{
+	border:1px solid #8274FF
+}
+QSpinBox::up-button, QSpinBox::down-button {
+	width: 0px;
+	height: 0px;
+	border: none;
+}
+/*qspin*/
+
+
+</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <property name="leftMargin">
+               <number>12</number>
+              </property>
+              <property name="topMargin">
+               <number>12</number>
+              </property>
+              <property name="rightMargin">
+               <number>12</number>
+              </property>
+              <property name="bottomMargin">
+               <number>12</number>
+              </property>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="label_4">
+                    <property name="text">
+                     <string>First Name</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="first_name">
+                    <property name="inputMethodHints">
+                     <set>Qt::ImhNone</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="label_6">
+                    <property name="text">
+                     <string>Last Name</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="last_name">
+                    <property name="minimumSize">
+                     <size>
+                      <width>40</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <item>
+                   <widget class="QLabel" name="label_5">
+                    <property name="text">
+                     <string>Middle Name</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="middle_name"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>Extension</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="extension">
+                    <item>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Jr.</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Sr.</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>I</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>II</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>III</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>IV</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <item>
+                   <widget class="QLabel" name="label_13">
+                    <property name="text">
+                     <string>Birthdate</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateEdit" name="birthdate">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="inputMethodHints">
+                     <set>Qt::ImhDate|Qt::ImhPreferNumbers</set>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                    </property>
+                    <property name="calendarPopup">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_17">
+                  <item>
+                   <widget class="QLabel" name="label_14">
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="age">
+                    <property name="inputMethodHints">
+                     <set>Qt::ImhDigitsOnly</set>
+                    </property>
+                    <property name="maximum">
+                     <number>200</number>
+                    </property>
+                    <property name="value">
+                     <number>20</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_18">
+                  <item>
+                   <widget class="QLabel" name="label_15">
+                    <property name="text">
+                     <string>Sex</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="sex">
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Male</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Female</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="2" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <item>
+                   <widget class="QLabel" name="label_12">
+                    <property name="text">
+                     <string>Place of Birth</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="place_of_birth"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <item>
+                   <widget class="QLabel" name="label_17">
+                    <property name="text">
+                     <string>Civil Status</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="civil_status">
+                    <property name="currentText">
+                     <string>Single</string>
+                    </property>
+                    <property name="placeholderText">
+                     <string/>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Single</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Married</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Separated</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Widowed</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_22">
+                  <item>
+                   <widget class="QLabel" name="label_20">
+                    <property name="text">
+                     <string>Education</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="education">
+                    <item>
+                     <property name="text">
+                      <string>No schooling completed</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Early Childhood Education</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Primary Education</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Lower Secondary Education</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Upper Secondary Education</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Post-secondary non-tertiary education</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Short-cycle tertiary education</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Bachelor level education or equivalent</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Master level education or equivalent</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Doctoral level education or equivalent</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="label_18">
+                    <property name="text">
+                     <string>Occupation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="occupation">
+                    <property name="editable">
+                     <bool>false</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string/>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Manager</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Professional</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Technicians and associate professional</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Clerical support worker</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Service and sales worker</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Skilled agricultural, forestry and fishery worker</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Craft and related trades worker</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Plant and machine operators and assembler</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Elementary occupation</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Armed forces occupation</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Unemployed</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                  <item>
+                   <widget class="QLabel" name="label_21">
+                    <property name="text">
+                     <string>Region</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="region">
+                    <property name="editable">
+                     <bool>false</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Region</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>Province</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="province"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_11">
+                  <item>
+                   <widget class="QLabel" name="label_10">
+                    <property name="text">
+                     <string>Municipality/City</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="city"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_12">
+                  <item>
+                   <widget class="QLabel" name="label_9">
+                    <property name="text">
+                     <string>Barangay</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="barangay">
+                    <property name="placeholderText">
+                     <string>--</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_13">
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>Sitio</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="sitio">
+                    <property name="editable">
+                     <bool>true</bool>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Ayunan</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Bajada</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Bugwak</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Gumamela</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Sampaguita</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>San Francisco</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Tambukawon</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_14">
+                  <item>
+                   <widget class="QLabel" name="label_19">
+                    <property name="text">
+                     <string>Zip Code</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="zip_code">
+                    <property name="maximum">
+                     <number>999999</number>
+                    </property>
+                    <property name="value">
+                     <number>9409</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_19">
+                  <item>
+                   <widget class="QLabel" name="label_16">
+                    <property name="text">
+                     <string>Citizenship</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="citizenship">
+                    <item>
+                     <property name="text">
+                      <string>Filipino</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Foreign National</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Dual Citizen</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QWidget" name="btn_lists" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>700</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+	color:white;
+	font-size:9pt;
+	background-color:#202020;
+	border-radius:25px;
+}
+QPushButton{
+	padding-right:10px;
+	padding-left:10px;
+	height:40px;
+	border:none;
+	border-radius:5px;
+}
+QPushButton:hover{
+	background-color:#8274FF;
+}</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>42</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="show_btn">
+                <property name="text">
+                 <string>Show</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main_res.qrc">
+                  <normaloff>:/newPrefix/main_res/list_white.png</normaloff>:/newPrefix/main_res/list_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="add_btn">
+                <property name="font">
+                 <font>
+                  <family>Arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>  Add</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main_res.qrc">
+                  <normaloff>:/newPrefix/main_res/add_white.png</normaloff>:/newPrefix/main_res/add_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>42</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="delete_btn">
+                <property name="text">
+                 <string>Delete</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main_res.qrc">
+                  <normaloff>:/newPrefix/main_res/delete_white.png</normaloff>:/newPrefix/main_res/delete_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="edit_btn">
+                <property name="text">
+                 <string>Edit</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main_res.qrc">
+                  <normaloff>:/newPrefix/main_res/changes_white.png</normaloff>:/newPrefix/main_res/changes_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>42</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="search_btn">
+                <property name="text">
+                 <string>Search</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main_res.qrc">
+                  <normaloff>:/newPrefix/main_res/search_white.png</normaloff>:/newPrefix/main_res/search_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>42</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="clear_sel_btn">
+                <property name="text">
+                 <string>Clear Selection</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="main_res.qrc">
+                  <normaloff>:/newPrefix/main_res/clear_white.png</normaloff>:/newPrefix/main_res/clear_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QWidget" name="table_widget" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>800</width>
+               <height>350</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+	color:white;
+	font-size:9pt;
+	background-color:#202020;
+	border-radius:25px;
+}
+QTableWidget{
+	border:1px solid #6A6B6C;
+	border-radius:5px;
+	padding-left:5px;
+}
+QTableWidget:item{
+	border: 1px solid #6A6B6C;
+	padding-left:10px;
+	padding-right:10px;
+}
+QTableWidget:item:selected {
+	background-color: #8274FF;
+	color: #111111;
+}
+QHeaderView:section{
+	border:none;
+	background-color:#111111;
+	border:1px solid #6A6B6C;
+	padding-left:5px;
+}
+QHeaderView:section:hover{
+	border:2px solid #6A6B6C;
+	background-color:#3d3d3d;
+}
+QHeaderView:section:focus{
+	border:1px solid #8274FF;
+}
+QScrollBar:vertical{
+	width:9px;
+	margin: 0px 0px 0px 0px;
+	border:none;
+	background:none;
+	background-color: #202020;
+}
+QScrollBar:handle:vertical {
+	background-color: #8274FF;
+	border-radius:3px;
+	min-height:12px;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+	background: none;
+	height: 0px;
+	width: 0px;
+}
+QScrollBar:horizontal {
+	height:9px;
+	margin: 0px 0px 0px 0px;
+	border:none;
+	background:none;
+	background-color: #202020;
+}
+QScrollBar::handle:horizontal {
+	background-color: #8274FF;
+	border-radius:3px;
+	min-width:12px;
+}
+QScrollBar::add-line:horizonal,
+QScrollBar::sub-line:horizonal,
+QScrollBar::up-arrow:horizonal,
+QScrollBar::down-arrow:horizonal,
+QScrollBar::add-page:horizonal,
+QScrollBar::sub-page:horizonal {
+	background: none;
+	height: 0px;
+	width: 0px;
+}</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="result_table">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="selectionMode">
+                 <enum>QAbstractItemView::ExtendedSelection</enum>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectRows</enum>
+                </property>
+                <property name="rowCount">
+                 <number>0</number>
+                </property>
+                <column>
+                 <property name="text">
+                  <string>ID</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>First Name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Last Name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Middle Name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Extension</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Birthdate</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Age</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Sex</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Region</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Province</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Municipality/City</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Barangay</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Sitio</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Zip Code</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Citizenship</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Place of Birth</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Civil Status</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Education</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Occupation</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="settings_stack">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QWidget" name="settings_widget" native="true">
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+	font-size:16px;
+	color:#ffffff;
+	background-color:#202020;
+	border-radius:25px;
+}
+QPushButton{
+	padding-right:10px;
+	padding-left:10px;
+	height:40px;
+	border:none;
+	border-radius:5px;
+}
+QPushButton:hover{
+	background-color:#8274FF;
+}
+QComboBox{
+	height:25px;
+	border:1px solid #6A6B6C;
+	border-radius:5px;
+	padding-left:5px;
+}
+QComboBox:drop-down{
+	border:0px;
+}
+QComboBox:down-arrow{
+	image: url(:/icons/down-arrow_white.png);
+	width:12px;
+}
+QComboBox:hover{
+	border:2px solid #6A6B6C;
+	background-color:#3d3d3d;
+}
+QComboBox:focus{
+	border:1px solid #8274FF;
+}
+QComboBox:on{
+	border:1px solid #8274FF;
+}
+QComboBox QListView{
+	font-size:9px;
+	border:1px solid #8274FF;
+	padding:5px;
+	outline:none;
+	border-radius:5px;
+}
+QComboBox QListView:item{
+	padding-left:5px;
+	background-color: #FFFFFF;
+}
+QComboBox QListView:item:hover{
+	background-color: #202020;
+}
+QComboBox QScrollBar:vertical{
+	width:12px;
+	margin: 0px 0px 0px 0px;
+	border:none;
+	background:none;
+	background-color: #202020;
+}
+QComboBox QScrollBar:handle:vertical {
+	background-color: #8274FF;
+	border-radius:5px;
+	min-height:5px;
+}
+QComboBox QScrollBar::add-line:vertical,
+QComboBox QScrollBar::sub-line:vertical,
+QComboBox QScrollBar::up-arrow:vertical,
+QComboBox QScrollBar::down-arrow:vertical,
+QComboBox QScrollBar::add-page:vertical,
+QComboBox QScrollBar::sub-page:vertical {
+	background: none;
+	height: 0px;
+	width: 0px;
+}</string>
+             </property>
+             <widget class="QPushButton" name="clear_data_btn">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>90</y>
+                <width>251</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Clear All Data</string>
+              </property>
+             </widget>
+             <widget class="QWidget" name="layoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>272</width>
+                <height>53</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_23">
+               <item>
+                <widget class="QLabel" name="label_22">
+                 <property name="text">
+                  <string>Fonts</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFontComboBox" name="fontComboBox"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QWidget" name="icon_name_widget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+	color:#ffffff;
+	background-color: #181818;
+	border-radius:10px;
+}
+QPushButton{
+	color:white;
+	height:40px;
+	border:none;
+	text-align:left;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+QPushButton:hover{
+	background-color:#3d3d3d;
+}
+QLabel{
+
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>9</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="menu_name">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="main_res.qrc">
+              <normaloff>:/newPrefix/main_res/menu_white.png</normaloff>:/newPrefix/main_res/menu_white.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="icon_name" native="true">
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+	background-color:#3d3d3d;
+}
+QPushButton:checked{
+	background-color:#282828;
+}</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="dashboard_name">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>  Dashboard  </string>
+               </property>
+               <property name="icon">
+                <iconset resource="main_res.qrc">
+                 <normaloff>:/newPrefix/main_res/dashboard.png</normaloff>:/newPrefix/main_res/dashboard.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="table_name">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>  Table</string>
+               </property>
+               <property name="icon">
+                <iconset resource="main_res.qrc">
+                 <normaloff>:/newPrefix/main_res/list_white.png</normaloff>:/newPrefix/main_res/list_white.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="settings_name">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>  Settings  </string>
+               </property>
+               <property name="icon">
+                <iconset resource="main_res.qrc">
+                 <normaloff>:/newPrefix/main_res/settings.png</normaloff>:/newPrefix/main_res/settings.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>228</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="main_res.qrc">:/newPrefix/main_res/profile.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="username_label">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>16</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="signout_name">
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>   Sign Out</string>
+            </property>
+            <property name="icon">
+             <iconset resource="main_res.qrc">
+              <normaloff>:/newPrefix/main_res/log_out.png</normaloff>:/newPrefix/main_res/log_out.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="icon_only_widget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>58</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>58</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+	background-color: #181818;
+	border-radius:10px;
+}
+QPushButton{
+	color:white;
+	height:40px;
+	border:none;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+}
+QPushButton:hover{
+	background-color:#3d3d3d;
+}
+QLabel{
+
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="menu">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="main_res.qrc">
+              <normaloff>:/newPrefix/main_res/menu_white.png</normaloff>:/newPrefix/main_res/menu_white.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="icon_only" native="true">
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	color:white;
+	height:40px;
+	border:none;
+	border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#3d3d3d;
+}
+QPushButton:checked{
+	background-color:#282828;
+}</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="dashboard">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="main_res.qrc">
+                 <normaloff>:/newPrefix/main_res/dashboard.png</normaloff>:/newPrefix/main_res/dashboard.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="table">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="main_res.qrc">
+                 <normaloff>:/newPrefix/main_res/list_white.png</normaloff>:/newPrefix/main_res/list_white.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="settings">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="main_res.qrc">
+                 <normaloff>:/newPrefix/main_res/settings.png</normaloff>:/newPrefix/main_res/settings.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>230</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="main_res.qrc">:/newPrefix/main_res/profile.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="signout">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="main_res.qrc">
+              <normaloff>:/newPrefix/main_res/log_out.png</normaloff>:/newPrefix/main_res/log_out.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="main_res.qrc"/>
+  <include location="main_res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>settings</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>settings_name</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>settings_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>settings</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashboard</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashboard_name</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashboard_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashboard</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signout_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signout</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>654</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>656</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signout</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signout_name</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>646</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menu_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>menu</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>51</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menu</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>menu_name</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menu_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_only_widget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menu_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_name_widget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>89</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menu_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_only_widget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>69</x>
+     <y>277</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menu_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_name_widget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>323</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>table_name</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>table</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>table</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>table_name</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

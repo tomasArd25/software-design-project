@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>main_res/log_out.png</file>
+    <file>main_res/profile.png</file>
+    <file>main_res/add_white.png</file>
+    <file>main_res/changes_white.png</file>
+    <file>main_res/clear_white.png</file>
+    <file>main_res/dashboard.png</file>
+    <file>main_res/delete_white.png</file>
+    <file>main_res/down-arrow_white.png</file>
+    <file>main_res/list_white.png</file>
+    <file>main_res/menu_white.png</file>
+    <file>main_res/search_white.png</file>
+    <file>main_res/settings.png</file>
+  </qresource>
+</RCC>
