@@ -32,6 +32,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4 = QtWidgets.QGridLayout(self.all_widget)
         self.gridLayout_4.setObjectName("gridLayout_4")
         self.stackedWidget = QtWidgets.QStackedWidget(self.all_widget)
+        self.stackedWidget.setStyleSheet("")
         self.stackedWidget.setObjectName("stackedWidget")
         self.dashboard_stack = QtWidgets.QWidget()
         self.dashboard_stack.setObjectName("dashboard_stack")
@@ -95,7 +96,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -1630, 820, 2250))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 820, 2250))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_8 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_8.setObjectName("gridLayout_8")
@@ -162,7 +163,6 @@ class Ui_MainWindow(object):
         self.add_widget.setMinimumSize(QtCore.QSize(800, 225))
         self.add_widget.setStyleSheet("QWidget{\n"
 "    color:white;\n"
-"    font-size:9pt;\n"
 "    background-color:#202020;\n"
 "    border-radius:25px;\n"
 "}\n"
@@ -232,7 +232,6 @@ class Ui_MainWindow(object):
 "    height:25px;\n"
 "    border:1px solid #6A6B6C;\n"
 "    border-radius:5px;\n"
-"    font-size:9pt;\n"
 "    padding-left:5px;\n"
 "    max-width:150px;\n"
 "}\n"
@@ -538,7 +537,6 @@ class Ui_MainWindow(object):
         self.btn_lists.setMinimumSize(QtCore.QSize(700, 60))
         self.btn_lists.setStyleSheet("QWidget{\n"
 "    color:white;\n"
-"    font-size:9pt;\n"
 "    background-color:#202020;\n"
 "    border-radius:25px;\n"
 "}\n"
@@ -629,7 +627,6 @@ class Ui_MainWindow(object):
         self.table_widget.setMinimumSize(QtCore.QSize(800, 350))
         self.table_widget.setStyleSheet("QWidget{\n"
 "    color:white;\n"
-"    font-size:9pt;\n"
 "    background-color:#202020;\n"
 "    border-radius:25px;\n"
 "}\n"
@@ -761,21 +758,12 @@ class Ui_MainWindow(object):
         self.gridLayout_6.setObjectName("gridLayout_6")
         self.settings_widget = QtWidgets.QWidget(self.settings_stack)
         self.settings_widget.setStyleSheet("QWidget{\n"
-"    font-size:16px;\n"
-"    color:#ffffff;\n"
+"    color:white;\n"
+"    font-size:12pt;\n"
 "    background-color:#202020;\n"
 "    border-radius:25px;\n"
 "}\n"
-"QPushButton{\n"
-"    padding-right:10px;\n"
-"    padding-left:10px;\n"
-"    height:40px;\n"
-"    border:none;\n"
-"    border-radius:5px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color:#8274FF;\n"
-"}\n"
+"/* combo box*/\n"
 "QComboBox{\n"
 "    height:25px;\n"
 "    border:1px solid #6A6B6C;\n"
@@ -786,7 +774,7 @@ class Ui_MainWindow(object):
 "    border:0px;\n"
 "}\n"
 "QComboBox:down-arrow{\n"
-"    image: url(:/icons/down-arrow_white.png);\n"
+"    image: url(:/newPrefix/main_res/down-arrow_white.png);\n"
 "    width:12px;\n"
 "}\n"
 "QComboBox:hover{\n"
@@ -834,23 +822,64 @@ class Ui_MainWindow(object):
 "    background: none;\n"
 "    height: 0px;\n"
 "    width: 0px;\n"
-"}")
+"}\n"
+"/* combo box*/\n"
+"QPushButton{\n"
+"    padding-right:10px;\n"
+"    padding-left:10px;\n"
+"\n"
+"    height:40px;\n"
+"    border:none;\n"
+"    border-radius:5px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"")
         self.settings_widget.setObjectName("settings_widget")
         self.clear_data_btn = QtWidgets.QPushButton(self.settings_widget)
-        self.clear_data_btn.setGeometry(QtCore.QRect(20, 90, 251, 41))
+        self.clear_data_btn.setGeometry(QtCore.QRect(30, 130, 116, 40))
+        self.clear_data_btn.setStyleSheet("QPushButton:hover{\n"
+"    background-color:#8274FF;\n"
+"}")
         self.clear_data_btn.setObjectName("clear_data_btn")
         self.layoutWidget = QtWidgets.QWidget(self.settings_widget)
-        self.layoutWidget.setGeometry(QtCore.QRect(20, 20, 272, 53))
+        self.layoutWidget.setGeometry(QtCore.QRect(30, 80, 196, 38))
         self.layoutWidget.setObjectName("layoutWidget")
-        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.layoutWidget)
-        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_23.setObjectName("verticalLayout_23")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.layoutWidget)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.label_22 = QtWidgets.QLabel(self.layoutWidget)
         self.label_22.setObjectName("label_22")
-        self.verticalLayout_23.addWidget(self.label_22)
-        self.fontComboBox = QtWidgets.QFontComboBox(self.layoutWidget)
-        self.fontComboBox.setObjectName("fontComboBox")
-        self.verticalLayout_23.addWidget(self.fontComboBox)
+        self.horizontalLayout_7.addWidget(self.label_22)
+        self.switch_btn = QtWidgets.QPushButton(self.layoutWidget)
+        self.switch_btn.setMaximumSize(QtCore.QSize(72, 36))
+        self.switch_btn.setStyleSheet("")
+        self.switch_btn.setText("")
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/switch_off.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/switch_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.switch_btn.setIcon(icon6)
+        self.switch_btn.setIconSize(QtCore.QSize(72, 36))
+        self.switch_btn.setCheckable(True)
+        self.switch_btn.setObjectName("switch_btn")
+        self.horizontalLayout_7.addWidget(self.switch_btn)
+        self.layoutWidget1 = QtWidgets.QWidget(self.settings_widget)
+        self.layoutWidget1.setGeometry(QtCore.QRect(31, 31, 241, 29))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget1)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget1)
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_3.addWidget(self.label_3)
+        self.font_size_cb = QtWidgets.QComboBox(self.layoutWidget1)
+        self.font_size_cb.setObjectName("font_size_cb")
+        self.font_size_cb.addItem("")
+        self.font_size_cb.addItem("")
+        self.font_size_cb.addItem("")
+        self.horizontalLayout_3.addWidget(self.font_size_cb)
         self.gridLayout_6.addWidget(self.settings_widget, 0, 0, 1, 1)
         self.stackedWidget.addWidget(self.settings_stack)
         self.gridLayout_4.addWidget(self.stackedWidget, 0, 2, 1, 1)
@@ -885,9 +914,9 @@ class Ui_MainWindow(object):
         self.menu_name = QtWidgets.QPushButton(self.icon_name_widget)
         self.menu_name.setStyleSheet("")
         self.menu_name.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/menu_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.menu_name.setIcon(icon6)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/menu_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.menu_name.setIcon(icon7)
         self.menu_name.setIconSize(QtCore.QSize(25, 25))
         self.menu_name.setCheckable(True)
         self.menu_name.setChecked(False)
@@ -912,9 +941,9 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.dashboard_name.setFont(font)
         self.dashboard_name.setStyleSheet("")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/dashboard.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.dashboard_name.setIcon(icon7)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/dashboard.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.dashboard_name.setIcon(icon8)
         self.dashboard_name.setIconSize(QtCore.QSize(25, 25))
         self.dashboard_name.setCheckable(True)
         self.dashboard_name.setChecked(True)
@@ -940,9 +969,9 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.settings_name.setFont(font)
         self.settings_name.setStyleSheet("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.settings_name.setIcon(icon8)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.settings_name.setIcon(icon9)
         self.settings_name.setIconSize(QtCore.QSize(25, 25))
         self.settings_name.setCheckable(True)
         self.settings_name.setAutoExclusive(True)
@@ -981,9 +1010,9 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.signout_name.setFont(font)
         self.signout_name.setStyleSheet("")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/log_out.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.signout_name.setIcon(icon9)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/log_out.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.signout_name.setIcon(icon10)
         self.signout_name.setIconSize(QtCore.QSize(25, 25))
         self.signout_name.setCheckable(True)
         self.signout_name.setAutoExclusive(False)
@@ -1018,7 +1047,7 @@ class Ui_MainWindow(object):
         self.menu = QtWidgets.QPushButton(self.icon_only_widget)
         self.menu.setStyleSheet("")
         self.menu.setText("")
-        self.menu.setIcon(icon6)
+        self.menu.setIcon(icon7)
         self.menu.setIconSize(QtCore.QSize(25, 25))
         self.menu.setCheckable(True)
         self.menu.setChecked(False)
@@ -1050,7 +1079,7 @@ class Ui_MainWindow(object):
         self.dashboard.setFont(font)
         self.dashboard.setStyleSheet("")
         self.dashboard.setText("")
-        self.dashboard.setIcon(icon7)
+        self.dashboard.setIcon(icon8)
         self.dashboard.setIconSize(QtCore.QSize(25, 25))
         self.dashboard.setCheckable(True)
         self.dashboard.setChecked(True)
@@ -1070,7 +1099,7 @@ class Ui_MainWindow(object):
         self.settings.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.settings.setStyleSheet("")
         self.settings.setText("")
-        self.settings.setIcon(icon8)
+        self.settings.setIcon(icon9)
         self.settings.setIconSize(QtCore.QSize(25, 25))
         self.settings.setCheckable(True)
         self.settings.setAutoExclusive(True)
@@ -1092,7 +1121,7 @@ class Ui_MainWindow(object):
         self.signout = QtWidgets.QPushButton(self.icon_only_widget)
         self.signout.setStyleSheet("")
         self.signout.setText("")
-        self.signout.setIcon(icon9)
+        self.signout.setIcon(icon10)
         self.signout.setIconSize(QtCore.QSize(25, 25))
         self.signout.setCheckable(True)
         self.signout.setAutoExclusive(False)
@@ -1232,7 +1261,11 @@ class Ui_MainWindow(object):
         item = self.result_table.horizontalHeaderItem(18)
         item.setText(_translate("MainWindow", "Occupation"))
         self.clear_data_btn.setText(_translate("MainWindow", "Clear All Data"))
-        self.label_22.setText(_translate("MainWindow", "Fonts"))
+        self.label_22.setText(_translate("MainWindow", "Dark/Light Mode"))
+        self.label_3.setText(_translate("MainWindow", "Table Font Size"))
+        self.font_size_cb.setItemText(0, _translate("MainWindow", "Small"))
+        self.font_size_cb.setItemText(1, _translate("MainWindow", "Medium"))
+        self.font_size_cb.setItemText(2, _translate("MainWindow", "Large"))
         self.dashboard_name.setText(_translate("MainWindow", "  Dashboard  "))
         self.table_name.setText(_translate("MainWindow", "  Table"))
         self.settings_name.setText(_translate("MainWindow", "  Settings  "))

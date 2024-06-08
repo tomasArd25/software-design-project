@@ -36,8 +36,11 @@
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="2">
         <widget class="QStackedWidget" name="stackedWidget">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="dashboard_stack">
           <layout class="QGridLayout" name="gridLayout_7">
@@ -263,7 +266,6 @@ QScrollBar::sub-page:horizonal {
              <property name="styleSheet">
               <string notr="true">QWidget{
 	color:white;
-	font-size:9pt;
 	background-color:#202020;
 	border-radius:25px;
 }
@@ -333,7 +335,6 @@ QLineEdit{
 	height:25px;
 	border:1px solid #6A6B6C;
 	border-radius:5px;
-	font-size:9pt;
 	padding-left:5px;
 	max-width:150px;
 }
@@ -992,7 +993,6 @@ QSpinBox::up-button, QSpinBox::down-button {
              <property name="styleSheet">
               <string notr="true">QWidget{
 	color:white;
-	font-size:9pt;
 	background-color:#202020;
 	border-radius:25px;
 }
@@ -1257,7 +1257,6 @@ QPushButton:hover{
              <property name="styleSheet">
               <string notr="true">QWidget{
 	color:white;
-	font-size:9pt;
 	background-color:#202020;
 	border-radius:25px;
 }
@@ -1525,13 +1524,13 @@ QComboBox QScrollBar::sub-page:vertical {
 QPushButton{
 	padding-right:10px;
 	padding-left:10px;
+
 	height:40px;
 	border:none;
 	border-radius:5px;
 }
-QPushButton:hover{
-	background-color:#8274FF;
-}
+
+
 
 
 </string>
@@ -1539,35 +1538,105 @@ QPushButton:hover{
              <widget class="QPushButton" name="clear_data_btn">
               <property name="geometry">
                <rect>
-                <x>20</x>
-                <y>90</y>
-                <width>211</width>
-                <height>41</height>
+                <x>30</x>
+                <y>130</y>
+                <width>116</width>
+                <height>40</height>
                </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton:hover{
+	background-color:#8274FF;
+}</string>
               </property>
               <property name="text">
                <string>Clear All Data</string>
               </property>
              </widget>
-             <widget class="QWidget" name="">
+             <widget class="QWidget" name="layoutWidget">
               <property name="geometry">
                <rect>
-                <x>20</x>
-                <y>20</y>
-                <width>221</width>
-                <height>53</height>
+                <x>30</x>
+                <y>80</y>
+                <width>196</width>
+                <height>38</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_23">
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
                <item>
-                <widget class="QLabel" name="label_3">
+                <widget class="QLabel" name="label_22">
                  <property name="text">
-                  <string>Font size</string>
+                  <string>Dark/Light Mode</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="font_size"/>
+                <widget class="QPushButton" name="switch_btn">
+                 <property name="maximumSize">
+                  <size>
+                   <width>72</width>
+                   <height>36</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main_res.qrc">
+                   <normaloff>:/newPrefix/main_res/switch_off.png</normaloff>
+                   <normalon>:/newPrefix/main_res/switch_on.png</normalon>:/newPrefix/main_res/switch_off.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>72</width>
+                   <height>36</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="layoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>31</x>
+                <y>31</y>
+                <width>241</width>
+                <height>29</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Table Font Size</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="font_size_cb">
+                 <item>
+                  <property name="text">
+                   <string>Small</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Medium</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Large</string>
+                  </property>
+                 </item>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -2164,7 +2233,6 @@ QPushButton:checked{
   </widget>
  </widget>
  <resources>
-  <include location="main_res.qrc"/>
   <include location="main_res.qrc"/>
  </resources>
  <connections>

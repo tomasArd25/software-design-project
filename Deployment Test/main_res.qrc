@@ -1,6 +1,8 @@
 <RCC>
   <qresource prefix="newPrefix">
     <file>main_res/log_out.png</file>
+    <file>main_res/switch_on.png</file>
+    <file>main_res/switch_off.png</file>
     <file>main_res/profile.png</file>
     <file>main_res/add_white.png</file>
     <file>main_res/changes_white.png</file>

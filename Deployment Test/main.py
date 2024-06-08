@@ -170,9 +170,11 @@ class Login_window(QMainWindow, Ui_LoginWindow):
 class Main_window(QMainWindow, Ui_MainWindow):
     def __init__(self, username):
         super().__init__()
+        self.setupUi(self)
+        self.font_size_cb.setCurrentText("Medium")
+        self.stackedWidget.setStyleSheet("QWidget{font-size:11pt;}")
         self.current_username = username
-        self.setupUi(self) 
-        self.setWindowTitle('Information System')
+        self.setWindowTitle('SysInfo')
         self.showMaximized()
         self.create_database(self.current_username)
         self.load_data(f"SELECT * FROM '{self.current_username}'")
@@ -195,6 +197,8 @@ class Main_window(QMainWindow, Ui_MainWindow):
         self.result_table.resizeColumnsToContents()
         
     def init_signal_slot(self):
+        self.font_size_cb.currentIndexChanged.connect(self.set_font_size)
+
         self.dashboard_name.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(0))
         self.dashboard.clicked.connect(lambda:self.stackedWidget.setCurrentIndex(0))
         self.dashboard_name.clicked.connect(self.load_all_chart)
@@ -302,51 +306,80 @@ class Main_window(QMainWindow, Ui_MainWindow):
             self.resize_table()
         except Exception as e:
             return e
+        self.non_editable()
 
     def add_data(self):
-        conn = sqlite3.connect('data.db')
-        cursor = conn.cursor()
-        
-        first_name = self.first_name.text().capitalize().strip()
-        last_name = self.last_name.text().capitalize().strip()
-        middle_name = self.middle_name.text().capitalize().strip()
-        extension = self.extension.currentText()
-        birthdate = self.birthdate.dateTime().toString('dd/MM/yyyy').strip()
-        age = self.age.text().strip()
-        sex = self.sex.currentText()
-        region = self.region.currentText()
-        province = self.province.currentText()
-        city = self.city.currentText()
-        barangay = self.barangay.currentText()
-        sitio = self.sitio.currentText().capitalize().strip()
-        zip_code = self.zip_code.text().strip()
-        citizenship = self.citizenship.currentText()
-        place_of_birth = self.place_of_birth.text().capitalize().strip()
-        civil_status = self.civil_status.currentText()
-        education = self.education.currentText()
-        occupation = self.occupation.currentText()
+        conn = None
+        cursor = None
+        try:
+            conn = sqlite3.connect('data.db')
+            cursor = conn.cursor()
+            
+            first_name = self.first_name.text().capitalize().strip()
+            last_name = self.last_name.text().capitalize().strip()
+            middle_name = self.middle_name.text().capitalize().strip()
+            extension = self.extension.currentText()
+            birthdate = self.birthdate.dateTime().toString('dd/MM/yyyy').strip()
+            age = self.age.text().strip()
+            sex = self.sex.currentText()
+            region = self.region.currentText()
+            province = self.province.currentText()
+            city = self.city.currentText()
+            barangay = self.barangay.currentText()
+            sitio = self.sitio.currentText().capitalize().strip()
+            zip_code = self.zip_code.text().strip()
+            citizenship = self.citizenship.currentText()
+            place_of_birth = self.place_of_birth.text().capitalize().strip()
+            civil_status = self.civil_status.currentText()
+            education = self.education.currentText()
+            occupation = self.occupation.currentText()
 
-        if first_name=='' or last_name=='':
-            msg = QMessageBox()
-            msg.setWindowTitle('Enter data')
-            msg.setText('First name and last name cannot be empty.')
-            msg.setIcon(QMessageBox.Information)
-            msg.setStandardButtons(QMessageBox.Ok)
-            msg.exec_()
-        else:
+            if not first_name or not last_name:
+                msg = QMessageBox()
+                msg.setWindowTitle('Enter data')
+                msg.setText('First name and last name cannot be empty.')
+                msg.setIcon(QMessageBox.Information)
+                msg.setStandardButtons(QMessageBox.Ok)
+                msg.exec_()
+                return
+
+            cursor.execute(f"SELECT COUNT(*) FROM '{self.current_username}' WHERE first_name = ? AND last_name = ? AND birthdate = ?", 
+                        (first_name, last_name, birthdate))
+            if cursor.fetchone()[0] > 0:
+                msg = QMessageBox()
+                msg.setWindowTitle('Duplicate Entry')
+                msg.setText('A record with the same first name, last name, and birthdate already exists.')
+                msg.setIcon(QMessageBox.Warning)
+                msg.setStandardButtons(QMessageBox.Ok)
+                msg.exec_()
+                return
+
             cursor.execute(f"""
                 INSERT INTO "{self.current_username}" (first_name, last_name, middle_name, extension, 
                 birthdate, age, sex, region, province, city, barangay, sitio, zip_code, citizenship, 
                 place_of_birth, civil_status, education, occupation) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) """,(   
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) """, (   
                 first_name, last_name, middle_name, extension, 
                 birthdate, age, sex, region, province, city, barangay, sitio, zip_code, citizenship, 
                 place_of_birth, civil_status, education, occupation))
+            
             conn.commit()
-            cursor.close()
-            conn.close()
-        self.load_data(f"SELECT * FROM '{self.current_username}'")
-        self.non_editable()
+            self.load_data(f"SELECT * FROM '{self.current_username}'")
+            self.non_editable()
+
+        except sqlite3.Error as e:
+            msg = QMessageBox()
+            msg.setWindowTitle('Database Error')
+            msg.setText(f"An error occurred: {e}")
+            msg.setIcon(QMessageBox.Critical)
+            msg.setStandardButtons(QMessageBox.Ok)
+            msg.exec_()
+
+        finally:
+            if cursor:
+                cursor.close()
+            if conn:
+                conn.close()
     
     def delete_data(self):
         selected_items = self.result_table.selectedItems()
@@ -742,7 +775,16 @@ class Main_window(QMainWindow, Ui_MainWindow):
         self.matplotlib_widget = MatplotlibWidget(self.current_username)
         self.layout.addWidget(self.matplotlib_widget)
         self.matplotlib_widget.occupation_chart()
-
+    
+    def set_font_size(self):
+        font_size = self.font_size_cb.currentText()
+        if font_size == "Small":
+            self.stackedWidget.setStyleSheet("QWidget{font-size:9pt;}")
+        elif font_size == "Medium":
+            self.stackedWidget.setStyleSheet("QWidget{font-size:12pt;}")
+        elif font_size == "Large":
+            self.stackedWidget.setStyleSheet("QWidget{font-size:15pt;}")
+    
 class MatplotlibWidget(QWidget):
     def __init__(self, current_username):
         self.current_username = current_username
@@ -791,7 +833,7 @@ class MatplotlibWidget(QWidget):
             ax.axis('off')
             self.canvas.draw()
             return
-        category_counts = age_ranges.value_counts()
+        category_counts = age_ranges.value_counts().sort_index()
         self.figure.clear()
         ax = self.figure.add_subplot(111)
         self.figure.patch.set_facecolor('#111111')
@@ -821,7 +863,7 @@ class MatplotlibWidget(QWidget):
             ax.axis('off')
             self.canvas.draw()
             return
-        category_counts = df['sex'].value_counts()
+        category_counts = df['sex'].value_counts().sort_index()
         self.figure.clear()
         ax = self.figure.add_subplot(111)
         self.figure.patch.set_facecolor('#111111')
@@ -851,7 +893,7 @@ class MatplotlibWidget(QWidget):
             ax.axis('off')
             self.canvas.draw()
             return
-        category_counts = df['civil_status'].value_counts()
+        category_counts = df['civil_status'].value_counts().sort_index()
         self.figure.clear()
         ax = self.figure.add_subplot(111)
         self.figure.patch.set_facecolor('#111111')
@@ -881,7 +923,7 @@ class MatplotlibWidget(QWidget):
             ax.axis('off')
             self.canvas.draw()
             return
-        category_counts = df['education'].value_counts()
+        category_counts = df['education'].value_counts().sort_index()
         self.figure.clear()
         ax = self.figure.add_subplot(111)
         self.figure.patch.set_facecolor('#111111')
@@ -913,7 +955,7 @@ class MatplotlibWidget(QWidget):
             ax.axis('off')
             self.canvas.draw()
             return
-        category_counts = df['occupation'].value_counts()
+        category_counts = df['occupation'].value_counts().sort_index()
         self.figure.clear()
         ax = self.figure.add_subplot(111)
         self.figure.patch.set_facecolor('#111111')
@@ -1014,7 +1056,7 @@ class Edit_window(QWidget, Ui_EditWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    w = Login_window()
-    # w = Main_window('user')
+    # w = Login_window()
+    w = Main_window('user')
     w.show()
     app.exec()
