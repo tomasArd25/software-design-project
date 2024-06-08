@@ -1056,7 +1056,7 @@ class Edit_window(QWidget, Ui_EditWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    # w = Login_window()
-    w = Main_window('user')
+    w = Login_window()
+    # w = Main_window('user')
     w.show()
     app.exec()
