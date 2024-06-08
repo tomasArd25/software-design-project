@@ -37,7 +37,7 @@
        <item row="0" column="2">
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="dashboard_stack">
           <layout class="QGridLayout" name="gridLayout_7">
@@ -1456,21 +1456,12 @@ QScrollBar::sub-page:horizonal {
             <widget class="QWidget" name="settings_widget" native="true">
              <property name="styleSheet">
               <string notr="true">QWidget{
-	font-size:16px;
-	color:#ffffff;
+	color:white;
+	font-size:12pt;
 	background-color:#202020;
 	border-radius:25px;
 }
-QPushButton{
-	padding-right:10px;
-	padding-left:10px;
-	height:40px;
-	border:none;
-	border-radius:5px;
-}
-QPushButton:hover{
-	background-color:#8274FF;
-}
+/* combo box*/
 QComboBox{
 	height:25px;
 	border:1px solid #6A6B6C;
@@ -1481,7 +1472,7 @@ QComboBox:drop-down{
 	border:0px;
 }
 QComboBox:down-arrow{
-	image: url(:/icons/down-arrow_white.png);
+	image: url(:/newPrefix/main_res/down-arrow_white.png);
 	width:12px;
 }
 QComboBox:hover{
@@ -1529,14 +1520,28 @@ QComboBox QScrollBar::sub-page:vertical {
 	background: none;
 	height: 0px;
 	width: 0px;
-}</string>
+}
+/* combo box*/
+QPushButton{
+	padding-right:10px;
+	padding-left:10px;
+	height:40px;
+	border:none;
+	border-radius:5px;
+}
+QPushButton:hover{
+	background-color:#8274FF;
+}
+
+
+</string>
              </property>
              <widget class="QPushButton" name="clear_data_btn">
               <property name="geometry">
                <rect>
                 <x>20</x>
                 <y>90</y>
-                <width>251</width>
+                <width>211</width>
                 <height>41</height>
                </rect>
               </property>
@@ -1544,25 +1549,25 @@ QComboBox QScrollBar::sub-page:vertical {
                <string>Clear All Data</string>
               </property>
              </widget>
-             <widget class="QWidget" name="layoutWidget">
+             <widget class="QWidget" name="">
               <property name="geometry">
                <rect>
                 <x>20</x>
                 <y>20</y>
-                <width>272</width>
+                <width>221</width>
                 <height>53</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_23">
                <item>
-                <widget class="QLabel" name="label_22">
+                <widget class="QLabel" name="label_3">
                  <property name="text">
-                  <string>Fonts</string>
+                  <string>Font size</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QFontComboBox" name="fontComboBox"/>
+                <widget class="QComboBox" name="font_size"/>
                </item>
               </layout>
              </widget>
