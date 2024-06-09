@@ -801,7 +801,6 @@ class Main_window(QMainWindow, Ui_MainWindow):
             self.stackedWidget.setStyleSheet("QWidget{font-size:15pt;}")
         self.settings_cstm.setValue("font_size", font_size_cb)
 
-
     def toggle_dark_light(self):
         if not self.switch_btn.isChecked():
             self.apply_light_mode()
@@ -1896,7 +1895,6 @@ class Edit_window(QWidget, Ui_EditWindow):
         for row in rows:
             self.barangay_edit.addItem(row[0])
             self.barangay_edit.setItemData(self.barangay_edit.count() - 1, row[1])
-        print
         cursor.close()
         conn.close()
 
