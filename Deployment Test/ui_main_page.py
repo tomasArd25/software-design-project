@@ -177,7 +177,7 @@ class Ui_MainWindow(object):
 "    border:0px;\n"
 "}\n"
 "QComboBox:down-arrow{\n"
-"    image: url(:/newPrefix/main_res/down-arrow_white.png);\n"
+"    image: url(:/newPrefix/main_res/down-arrow.png);\n"
 "    width:12px;\n"
 "}\n"
 "QComboBox:hover{\n"
@@ -266,7 +266,7 @@ class Ui_MainWindow(object):
 "    border:0px;\n"
 "}\n"
 "QDateEdit:down-arrow{\n"
-"    image: url(:/icons/down-arrow_white.png);\n"
+"    image: url(:/icons/down-arrow.png);\n"
 "    width:12px;\n"
 "}\n"
 "/*qdate*/\n"
@@ -559,7 +559,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addItem(spacerItem)
         self.show_btn = QtWidgets.QPushButton(self.btn_lists)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/list_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/list.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.show_btn.setIcon(icon)
         self.show_btn.setIconSize(QtCore.QSize(25, 25))
         self.show_btn.setCheckable(True)
@@ -574,7 +574,7 @@ class Ui_MainWindow(object):
         self.add_btn.setFont(font)
         self.add_btn.setStyleSheet("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/add_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.add_btn.setIcon(icon1)
         self.add_btn.setIconSize(QtCore.QSize(25, 25))
         self.add_btn.setCheckable(True)
@@ -584,7 +584,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addItem(spacerItem2)
         self.delete_btn = QtWidgets.QPushButton(self.btn_lists)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/delete_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.delete_btn.setIcon(icon2)
         self.delete_btn.setIconSize(QtCore.QSize(25, 25))
         self.delete_btn.setCheckable(True)
@@ -594,7 +594,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addItem(spacerItem3)
         self.edit_btn = QtWidgets.QPushButton(self.btn_lists)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/changes_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/changes.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.edit_btn.setIcon(icon3)
         self.edit_btn.setIconSize(QtCore.QSize(25, 25))
         self.edit_btn.setCheckable(True)
@@ -604,7 +604,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addItem(spacerItem4)
         self.search_btn = QtWidgets.QPushButton(self.btn_lists)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/search_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/search.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.search_btn.setIcon(icon4)
         self.search_btn.setIconSize(QtCore.QSize(25, 25))
         self.search_btn.setCheckable(True)
@@ -614,7 +614,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addItem(spacerItem5)
         self.clear_sel_btn = QtWidgets.QPushButton(self.btn_lists)
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/clear_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/clear.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.clear_sel_btn.setIcon(icon5)
         self.clear_sel_btn.setIconSize(QtCore.QSize(25, 25))
         self.clear_sel_btn.setCheckable(True)
@@ -774,7 +774,7 @@ class Ui_MainWindow(object):
 "    border:0px;\n"
 "}\n"
 "QComboBox:down-arrow{\n"
-"    image: url(:/newPrefix/main_res/down-arrow_white.png);\n"
+"    image: url(:/newPrefix/main_res/down-arrow.png);\n"
 "    width:12px;\n"
 "}\n"
 "QComboBox:hover{\n"
@@ -903,9 +903,6 @@ class Ui_MainWindow(object):
 "}\n"
 "QPushButton:hover{\n"
 "    background-color:#3d3d3d;\n"
-"}\n"
-"QLabel{\n"
-"\n"
 "}")
         self.icon_name_widget.setObjectName("icon_name_widget")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.icon_name_widget)
@@ -915,7 +912,7 @@ class Ui_MainWindow(object):
         self.menu_name.setStyleSheet("")
         self.menu_name.setText("")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/menu_white.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(":/newPrefix/main_res/menu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menu_name.setIcon(icon7)
         self.menu_name.setIconSize(QtCore.QSize(25, 25))
         self.menu_name.setCheckable(True)
@@ -924,10 +921,7 @@ class Ui_MainWindow(object):
         self.menu_name.setObjectName("menu_name")
         self.verticalLayout_4.addWidget(self.menu_name)
         self.icon_name = QtWidgets.QWidget(self.icon_name_widget)
-        self.icon_name.setStyleSheet("QPushButton:hover{\n"
-"    background-color:#3d3d3d;\n"
-"}\n"
-"QPushButton:checked{\n"
+        self.icon_name.setStyleSheet("QPushButton:checked{\n"
 "    background-color:#282828;\n"
 "}")
         self.icon_name.setObjectName("icon_name")
@@ -1037,9 +1031,6 @@ class Ui_MainWindow(object):
 "}\n"
 "QPushButton:hover{\n"
 "    background-color:#3d3d3d;\n"
-"}\n"
-"QLabel{\n"
-"\n"
 "}")
         self.icon_only_widget.setObjectName("icon_only_widget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.icon_only_widget)
@@ -1060,9 +1051,6 @@ class Ui_MainWindow(object):
 "    height:40px;\n"
 "    border:none;\n"
 "    border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color:#3d3d3d;\n"
 "}\n"
 "QPushButton:checked{\n"
 "    background-color:#282828;\n"

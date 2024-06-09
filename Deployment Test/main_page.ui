@@ -280,7 +280,7 @@ QComboBox:drop-down{
 	border:0px;
 }
 QComboBox:down-arrow{
-	image: url(:/newPrefix/main_res/down-arrow_white.png);
+	image: url(:/newPrefix/main_res/down-arrow.png);
 	width:12px;
 }
 QComboBox:hover{
@@ -369,7 +369,7 @@ QDateEdit:drop-down{
 	border:0px;
 }
 QDateEdit:down-arrow{
-	image: url(:/icons/down-arrow_white.png);
+	image: url(:/icons/down-arrow.png);
 	width:12px;
 }
 /*qdate*/
@@ -1043,7 +1043,7 @@ QPushButton:hover{
                 </property>
                 <property name="icon">
                  <iconset resource="main_res.qrc">
-                  <normaloff>:/newPrefix/main_res/list_white.png</normaloff>:/newPrefix/main_res/list_white.png</iconset>
+                  <normaloff>:/newPrefix/main_res/list.png</normaloff>:/newPrefix/main_res/list.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1085,7 +1085,7 @@ QPushButton:hover{
                 </property>
                 <property name="icon">
                  <iconset resource="main_res.qrc">
-                  <normaloff>:/newPrefix/main_res/add_white.png</normaloff>:/newPrefix/main_res/add_white.png</iconset>
+                  <normaloff>:/newPrefix/main_res/add.png</normaloff>:/newPrefix/main_res/add.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1118,7 +1118,7 @@ QPushButton:hover{
                 </property>
                 <property name="icon">
                  <iconset resource="main_res.qrc">
-                  <normaloff>:/newPrefix/main_res/delete_white.png</normaloff>:/newPrefix/main_res/delete_white.png</iconset>
+                  <normaloff>:/newPrefix/main_res/delete.png</normaloff>:/newPrefix/main_res/delete.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1151,7 +1151,7 @@ QPushButton:hover{
                 </property>
                 <property name="icon">
                  <iconset resource="main_res.qrc">
-                  <normaloff>:/newPrefix/main_res/changes_white.png</normaloff>:/newPrefix/main_res/changes_white.png</iconset>
+                  <normaloff>:/newPrefix/main_res/changes.png</normaloff>:/newPrefix/main_res/changes.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1184,7 +1184,7 @@ QPushButton:hover{
                 </property>
                 <property name="icon">
                  <iconset resource="main_res.qrc">
-                  <normaloff>:/newPrefix/main_res/search_white.png</normaloff>:/newPrefix/main_res/search_white.png</iconset>
+                  <normaloff>:/newPrefix/main_res/search.png</normaloff>:/newPrefix/main_res/search.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1217,7 +1217,7 @@ QPushButton:hover{
                 </property>
                 <property name="icon">
                  <iconset resource="main_res.qrc">
-                  <normaloff>:/newPrefix/main_res/clear_white.png</normaloff>:/newPrefix/main_res/clear_white.png</iconset>
+                  <normaloff>:/newPrefix/main_res/clear.png</normaloff>:/newPrefix/main_res/clear.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1471,7 +1471,7 @@ QComboBox:drop-down{
 	border:0px;
 }
 QComboBox:down-arrow{
-	image: url(:/newPrefix/main_res/down-arrow_white.png);
+	image: url(:/newPrefix/main_res/down-arrow.png);
 	width:12px;
 }
 QComboBox:hover{
@@ -1678,9 +1678,6 @@ QPushButton{
 }
 QPushButton:hover{
 	background-color:#3d3d3d;
-}
-QLabel{
-
 }</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1700,7 +1697,7 @@ QLabel{
             </property>
             <property name="icon">
              <iconset resource="main_res.qrc">
-              <normaloff>:/newPrefix/main_res/menu_white.png</normaloff>:/newPrefix/main_res/menu_white.png</iconset>
+              <normaloff>:/newPrefix/main_res/menu.png</normaloff>:/newPrefix/main_res/menu.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -1722,10 +1719,7 @@ QLabel{
           <item>
            <widget class="QWidget" name="icon_name" native="true">
             <property name="styleSheet">
-             <string notr="true">QPushButton:hover{
-	background-color:#3d3d3d;
-}
-QPushButton:checked{
+             <string notr="true">QPushButton:checked{
 	background-color:#282828;
 }</string>
             </property>
@@ -1793,7 +1787,7 @@ QPushButton:checked{
                </property>
                <property name="icon">
                 <iconset resource="main_res.qrc">
-                 <normaloff>:/newPrefix/main_res/list_white.png</normaloff>:/newPrefix/main_res/list_white.png</iconset>
+                 <normaloff>:/newPrefix/main_res/list.png</normaloff>:/newPrefix/main_res/list.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -1987,9 +1981,6 @@ QPushButton{
 }
 QPushButton:hover{
 	background-color:#3d3d3d;
-}
-QLabel{
-
 }</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -2003,7 +1994,7 @@ QLabel{
             </property>
             <property name="icon">
              <iconset resource="main_res.qrc">
-              <normaloff>:/newPrefix/main_res/menu_white.png</normaloff>:/newPrefix/main_res/menu_white.png</iconset>
+              <normaloff>:/newPrefix/main_res/menu.png</normaloff>:/newPrefix/main_res/menu.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -2030,9 +2021,6 @@ QLabel{
 	height:40px;
 	border:none;
 	border-radius:10px;
-}
-QPushButton:hover{
-	background-color:#3d3d3d;
 }
 QPushButton:checked{
 	background-color:#282828;
@@ -2096,7 +2084,7 @@ QPushButton:checked{
                </property>
                <property name="icon">
                 <iconset resource="main_res.qrc">
-                 <normaloff>:/newPrefix/main_res/list_white.png</normaloff>:/newPrefix/main_res/list_white.png</iconset>
+                 <normaloff>:/newPrefix/main_res/list.png</normaloff>:/newPrefix/main_res/list.png</iconset>
                </property>
                <property name="iconSize">
                 <size>

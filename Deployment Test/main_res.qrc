@@ -1,18 +1,18 @@
 <RCC>
   <qresource prefix="newPrefix">
-    <file>main_res/log_out.png</file>
-    <file>main_res/switch_on.png</file>
-    <file>main_res/switch_off.png</file>
-    <file>main_res/profile.png</file>
-    <file>main_res/add_white.png</file>
-    <file>main_res/changes_white.png</file>
-    <file>main_res/clear_white.png</file>
+    <file>main_res/add.png</file>
+    <file>main_res/changes.png</file>
+    <file>main_res/clear.png</file>
     <file>main_res/dashboard.png</file>
-    <file>main_res/delete_white.png</file>
-    <file>main_res/down-arrow_white.png</file>
-    <file>main_res/list_white.png</file>
-    <file>main_res/menu_white.png</file>
-    <file>main_res/search_white.png</file>
+    <file>main_res/delete.png</file>
+    <file>main_res/down-arrow.png</file>
+    <file>main_res/list.png</file>
+    <file>main_res/log_out.png</file>
+    <file>main_res/menu.png</file>
+    <file>main_res/profile.png</file>
+    <file>main_res/search.png</file>
     <file>main_res/settings.png</file>
+    <file>main_res/switch_off.png</file>
+    <file>main_res/switch_on.png</file>
   </qresource>
 </RCC>
