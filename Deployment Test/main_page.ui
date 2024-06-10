@@ -40,7 +40,7 @@
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="dashboard_stack">
           <layout class="QGridLayout" name="gridLayout_7">
@@ -1042,7 +1042,7 @@ QPushButton:hover{
                  <string>Show</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="main_res.qrc">
+                 <iconset>
                   <normaloff>:/newPrefix/main_res/list.png</normaloff>:/newPrefix/main_res/list.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1084,7 +1084,7 @@ QPushButton:hover{
                  <string>  Add</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="main_res.qrc">
+                 <iconset>
                   <normaloff>:/newPrefix/main_res/add.png</normaloff>:/newPrefix/main_res/add.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1117,7 +1117,7 @@ QPushButton:hover{
                  <string>Delete</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="main_res.qrc">
+                 <iconset>
                   <normaloff>:/newPrefix/main_res/delete.png</normaloff>:/newPrefix/main_res/delete.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1150,7 +1150,7 @@ QPushButton:hover{
                  <string>Edit</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="main_res.qrc">
+                 <iconset>
                   <normaloff>:/newPrefix/main_res/changes.png</normaloff>:/newPrefix/main_res/changes.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1183,7 +1183,7 @@ QPushButton:hover{
                  <string>Search</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="main_res.qrc">
+                 <iconset>
                   <normaloff>:/newPrefix/main_res/search.png</normaloff>:/newPrefix/main_res/search.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1216,7 +1216,7 @@ QPushButton:hover{
                  <string>Clear Selection</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="main_res.qrc">
+                 <iconset>
                   <normaloff>:/newPrefix/main_res/clear.png</normaloff>:/newPrefix/main_res/clear.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -1585,7 +1585,7 @@ QPushButton{
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="main_res.qrc">
+                  <iconset>
                    <normaloff>:/newPrefix/main_res/switch_off.png</normaloff>
                    <normalon>:/newPrefix/main_res/switch_on.png</normalon>:/newPrefix/main_res/switch_off.png</iconset>
                  </property>
@@ -1696,7 +1696,7 @@ QPushButton:hover{
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="main_res.qrc">
+             <iconset>
               <normaloff>:/newPrefix/main_res/menu.png</normaloff>:/newPrefix/main_res/menu.png</iconset>
             </property>
             <property name="iconSize">
@@ -1754,7 +1754,7 @@ QPushButton:hover{
                 <string>  Dashboard  </string>
                </property>
                <property name="icon">
-                <iconset resource="main_res.qrc">
+                <iconset>
                  <normaloff>:/newPrefix/main_res/dashboard.png</normaloff>:/newPrefix/main_res/dashboard.png</iconset>
                </property>
                <property name="iconSize">
@@ -1786,7 +1786,7 @@ QPushButton:hover{
                 <string>  Table</string>
                </property>
                <property name="icon">
-                <iconset resource="main_res.qrc">
+                <iconset>
                  <normaloff>:/newPrefix/main_res/list.png</normaloff>:/newPrefix/main_res/list.png</iconset>
                </property>
                <property name="iconSize">
@@ -1830,7 +1830,7 @@ QPushButton:hover{
                 <string>  Settings  </string>
                </property>
                <property name="icon">
-                <iconset resource="main_res.qrc">
+                <iconset>
                  <normaloff>:/newPrefix/main_res/settings.png</normaloff>:/newPrefix/main_res/settings.png</iconset>
                </property>
                <property name="iconSize">
@@ -1889,7 +1889,7 @@ QPushButton:hover{
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap resource="main_res.qrc">:/newPrefix/main_res/profile.png</pixmap>
+               <pixmap>:/newPrefix/main_res/profile.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -1931,7 +1931,7 @@ QPushButton:hover{
              <string>   Sign Out</string>
             </property>
             <property name="icon">
-             <iconset resource="main_res.qrc">
+             <iconset>
               <normaloff>:/newPrefix/main_res/log_out.png</normaloff>:/newPrefix/main_res/log_out.png</iconset>
             </property>
             <property name="iconSize">
@@ -1993,7 +1993,7 @@ QPushButton:hover{
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="main_res.qrc">
+             <iconset>
               <normaloff>:/newPrefix/main_res/menu.png</normaloff>:/newPrefix/main_res/menu.png</iconset>
             </property>
             <property name="iconSize">
@@ -2057,7 +2057,7 @@ QPushButton:checked{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="main_res.qrc">
+                <iconset>
                  <normaloff>:/newPrefix/main_res/dashboard.png</normaloff>:/newPrefix/main_res/dashboard.png</iconset>
                </property>
                <property name="iconSize">
@@ -2083,7 +2083,7 @@ QPushButton:checked{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="main_res.qrc">
+                <iconset>
                  <normaloff>:/newPrefix/main_res/list.png</normaloff>:/newPrefix/main_res/list.png</iconset>
                </property>
                <property name="iconSize">
@@ -2121,7 +2121,7 @@ QPushButton:checked{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="main_res.qrc">
+                <iconset>
                  <normaloff>:/newPrefix/main_res/settings.png</normaloff>:/newPrefix/main_res/settings.png</iconset>
                </property>
                <property name="iconSize">
@@ -2175,7 +2175,7 @@ QPushButton:checked{
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="main_res.qrc">:/newPrefix/main_res/profile.png</pixmap>
+             <pixmap>:/newPrefix/main_res/profile.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -2194,7 +2194,7 @@ QPushButton:checked{
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="main_res.qrc">
+             <iconset>
               <normaloff>:/newPrefix/main_res/log_out.png</normaloff>:/newPrefix/main_res/log_out.png</iconset>
             </property>
             <property name="iconSize">

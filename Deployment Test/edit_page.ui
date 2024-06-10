@@ -1,48 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>EditWindow</class>
- <widget class="QWidget" name="EditWindow">
-  <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
-  </property>
+ <class>TestWindow</class>
+ <widget class="QMainWindow" name="TestWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>665</height>
+    <width>448</width>
+    <height>634</height>
    </rect>
   </property>
-  <property name="minimumSize">
-   <size>
-    <width>450</width>
-    <height>665</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>450</width>
-    <height>665</height>
-   </size>
-  </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #111111;
-</string>
+   <string notr="true">background-color:#111111;</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <widget class="QWidget" name="add_widget" native="true">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QWidget" name="add_widget_edit" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
 	color:white;
 	font-size:9pt;
 	background-color:#202020;
@@ -59,7 +44,7 @@ QComboBox:drop-down{
 	border:0px;
 }
 QComboBox:down-arrow{
-	image: url(:/newPrefix/edit_res/down-arrow_white.png);
+	image: url(:/newPrefix/edit_res/down-arrow.png);
 	width:12px;
 }
 QComboBox:hover{
@@ -186,615 +171,615 @@ QPushButton:hover{
 
 
 </string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="styleSheet">
-         <string notr="true">QLabel{
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="1">
+        <widget class="QPushButton" name="save_btn_edit">
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>241</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>242</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0" rowspan="4">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>First Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="first_name_edit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Last Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="last_name_edit">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Middle Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="middle_name_edit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Extension</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="extension_edit">
+             <item>
+              <property name="text">
+               <string/>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jr.</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sr.</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>I</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>II</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>III</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IV</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Birthdate</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="birthdate_edit">
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Age</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="age_edit">
+             <property name="maximum">
+              <number>200</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Sex</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="sex_edit">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <item>
+              <property name="text">
+               <string>Male</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Female</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>Region</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="region_edit">
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="placeholderText">
+              <string>Region</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Province</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="province_edit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Municipality/City</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="city_edit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Barangay</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="barangay_edit">
+             <property name="placeholderText">
+              <string>--</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Sitio</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="sitio_edit">
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string/>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Ayunan</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bajada</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bugwak</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gumamela</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sampaguita</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>San Francisco</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tambukawon</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Zip Code</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="zip_code_edit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Citizenship</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="citizenship_edit">
+             <item>
+              <property name="text">
+               <string>Filipino</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Foreign National</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Dual Citizen</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Place of Birth</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="place_of_birth_edit"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Civil Status</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="civil_status_edit">
+             <property name="currentText">
+              <string>Single</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+             <item>
+              <property name="text">
+               <string>Single</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Married</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Widowed</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Separated</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Education</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="education_edit">
+             <item>
+              <property name="text">
+               <string>No schooling completed</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Early Childhood Education</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Primary Education</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Lower Secondary Education</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Upper Secondary Education</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Post-secondary non-tertiary education</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Short-cycle tertiary education</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bachelor level education or equivalent</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Master level education or equivalent</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Doctoral level education or equivalent</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Occupation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="occupation_edit">
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+             <item>
+              <property name="text">
+               <string>Manager</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Professional</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Technicians and associate professional</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Clerical support worker</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Service and sales worker</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Skilled agricultural, forestry and fishery worker</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Craft and related trades worker</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Plant and machine operators and assembler</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Elementary occupation</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Armed forces occupation</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Unemployed</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
 	font-size:30px;
 	font-weight:bold;
 }</string>
-        </property>
-        <property name="text">
-         <string>Edit Information</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" rowspan="4">
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>First Name</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="first_name_edit"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>Last Name</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="last_name_edit">
-            <property name="minimumSize">
-             <size>
-              <width>40</width>
-              <height>0</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>Middle Name</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="middle_name_edit"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>Extension</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="extension_edit">
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Jr.</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Sr.</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>I</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>II</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>III</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>IV</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
-          <item>
-           <widget class="QLabel" name="label_13">
-            <property name="text">
-             <string>Birthdate</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QDateEdit" name="birthdate_edit">
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignJustify|Qt::AlignVCenter</set>
-            </property>
-            <property name="calendarPopup">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QLabel" name="label_14">
-            <property name="text">
-             <string>Age</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="age_edit">
-            <property name="maximum">
-             <number>200</number>
-            </property>
-            <property name="value">
-             <number>20</number>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item>
-           <widget class="QLabel" name="label_15">
-            <property name="text">
-             <string>Sex</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="sex_edit">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <item>
-             <property name="text">
-              <string>Male</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Female</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_8">
-          <item>
-           <widget class="QLabel" name="label_21">
-            <property name="text">
-             <string>Region</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="region_edit">
-            <property name="editable">
-             <bool>false</bool>
-            </property>
-            <property name="placeholderText">
-             <string>Region</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_16">
-          <item>
-           <widget class="QLabel" name="label_11">
-            <property name="text">
-             <string>Province</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="province_edit"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_17">
-          <item>
-           <widget class="QLabel" name="label_10">
-            <property name="text">
-             <string>Municipality/City</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="city_edit"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_18">
-          <item>
-           <widget class="QLabel" name="label_9">
-            <property name="text">
-             <string>Barangay</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="barangay_edit">
-            <property name="placeholderText">
-             <string>--</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_14">
-          <item>
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Sitio</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="sitio_edit">
-            <property name="editable">
-             <bool>true</bool>
-            </property>
-            <item>
-             <property name="text">
-              <string/>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Ayunan</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Bajada</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Bugwak</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Gumamela</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Sampaguita</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>San Francisco</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Tambukawon</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_9">
-          <item>
-           <widget class="QLabel" name="label_19">
-            <property name="text">
-             <string>Zip Code</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="zip_code_edit"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_15">
-          <item>
-           <widget class="QLabel" name="label_16">
-            <property name="text">
-             <string>Citizenship</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="citizenship_edit">
-            <item>
-             <property name="text">
-              <string>Filipino</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Foreign National</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Dual Citizen</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_11">
-          <item>
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>Place of Birth</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="place_of_birth_edit"/>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_12">
-          <item>
-           <widget class="QLabel" name="label_17">
-            <property name="text">
-             <string>Civil Status</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="civil_status_edit">
-            <property name="currentText">
-             <string>Single</string>
-            </property>
-            <property name="placeholderText">
-             <string/>
-            </property>
-            <item>
-             <property name="text">
-              <string>Single</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Married</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Widowed</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Separated</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_10">
-          <item>
-           <widget class="QLabel" name="label_20">
-            <property name="text">
-             <string>Education</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="education_edit">
-            <item>
-             <property name="text">
-              <string>No schooling completed</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Early Childhood Education</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Primary Education</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Lower Secondary Education</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Upper Secondary Education</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Post-secondary non-tertiary education</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Short-cycle tertiary education</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Bachelor level education or equivalent</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Master level education or equivalent</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Doctoral level education or equivalent</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_13">
-          <item>
-           <widget class="QLabel" name="label_18">
-            <property name="text">
-             <string>Occupation</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="occupation_edit">
-            <property name="editable">
-             <bool>false</bool>
-            </property>
-            <property name="placeholderText">
-             <string/>
-            </property>
-            <item>
-             <property name="text">
-              <string>Manager</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Professional</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Technicians and associate professional</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Clerical support worker</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Service and sales worker</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Skilled agricultural, forestry and fishery worker</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Craft and related trades worker</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Plant and machine operators and assembler</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Elementary occupation</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Armed forces occupation</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Unemployed</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item row="1" column="1">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>242</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="save_btn_edit">
-        <property name="text">
-         <string>Save</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QPushButton" name="discard_btn_edit">
-        <property name="text">
-         <string>Discard</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>241</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
-   </item>
-  </layout>
+         </property>
+         <property name="text">
+          <string>Edit Information</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="discard_btn_edit">
+         <property name="text">
+          <string>Discard</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="edit_res.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

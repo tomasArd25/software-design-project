@@ -170,7 +170,6 @@ class Login_window(QMainWindow, Ui_LoginWindow):
 class Main_window(QMainWindow, Ui_MainWindow):
     def __init__(self, username):
         super().__init__()
-        self.edit_window = Ui_EditWindow()
         self.setupUi(self)
 
         self.current_username = username
@@ -439,8 +438,7 @@ class Main_window(QMainWindow, Ui_MainWindow):
         selected_items = self.result_table.selectedItems()
 
         if selected_items:
-
-            self.edit_window = Edit_window()
+            self.edit_window = Edit_window(self.mode)
             self.edit_window.show()
 
             selected_row = selected_items[0].row()
@@ -1215,6 +1213,7 @@ class Main_window(QMainWindow, Ui_MainWindow):
 "QPushButton:checked{\n"
 "    background-color:#D7D7D7;\n"
 "}")
+
         self.mode = "light"
         self.settings_cstm.setValue("mode", "light")
 
@@ -1825,17 +1824,19 @@ class NumericTableWidgetItem(QTableWidgetItem):
         except ValueError:
             return super().__lt__(other)
 
-class Edit_window(QWidget, Ui_EditWindow):
-    def __init__(self):
+class Edit_window(QMainWindow, Ui_EditWindow):
+    def __init__(self, mode):
         super().__init__()
 
         self.setupUi(self)
         self.setWindowTitle('Edit')
 
+        self.mode = mode
+        self.toggle_dark()
+
         self.region_edit.currentIndexChanged.connect(self.load_province_edit)
         self.province_edit.currentIndexChanged.connect(self.load_city_edit)
         self.city_edit.currentIndexChanged.connect(self.load_brgy_edit)
-
         self.load_places_edit()
 
     def load_places_edit(self):
@@ -1898,9 +1899,324 @@ class Edit_window(QWidget, Ui_EditWindow):
         cursor.close()
         conn.close()
 
+    def toggle_dark(self):
+        if self.mode == "light":
+            
+            self.apply_light_mode()
+        else:
+            self.apply_dark_mode()
+
+    def apply_light_mode(self):
+        self.setStyleSheet("background-color: #EEEEEE;\n"
+"")
+        self.centralwidget.setStyleSheet("")
+        self.add_widget_edit.setStyleSheet("QWidget{\n"
+"    color:black;\n"
+"    font-size:9pt;\n"
+"    background-color:#DFDFDF;\n"
+"    border-radius:25px;\n"
+"}\n"
+"/* combo box*/\n"
+"QComboBox{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    padding-left:5px;\n"
+"    background-color:#DFDFDF;\n"
+"}\n"
+"QComboBox:drop-down{\n"
+"    border:0px;\n"
+"}\n"
+"QComboBox:down-arrow{\n"
+"    image: url(:/newPrefix/edit_res/down-arrow.png);\n"
+"    width:12px;\n"
+"}\n"
+"QComboBox:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#C2C2C2;\n"
+"}\n"
+"QComboBox:focus{\n"
+"    border:1px solid #8274FF;\n"
+"}\n"
+"QComboBox:on{\n"
+"    border:1px solid #8274FF;\n"
+"}\n"
+"QComboBox QListView{\n"
+"    font-size:9px;\n"
+"    border:1px solid #8274FF;\n"
+"    padding:5px;\n"
+"    outline:none;\n"
+"    border-radius:5px;\n"
+"}\n"
+"QComboBox QListView:item{\n"
+"    padding-left:5px;\n"
+"    background-color: #FFFFFF;\n"
+"}\n"
+"QComboBox QListView:item:hover{\n"
+"    background-color: #DFDFDF;\n"
+"}\n"
+"QComboBox QScrollBar:vertical{\n"
+"    width:12px;\n"
+"    margin: 0px 0px 0px 0px;\n"
+"    border:none;\n"
+"    background:none;\n"
+"    background-color: #DFDFDF;\n"
+"}\n"
+"QComboBox QScrollBar:handle:vertical {\n"
+"    background-color: #8274FF;\n"
+"    border-radius:5px;\n"
+"    min-height:5px;\n"
+"}\n"
+"QComboBox QScrollBar::add-line:vertical,\n"
+"QComboBox QScrollBar::sub-line:vertical,\n"
+"QComboBox QScrollBar::up-arrow:vertical,\n"
+"QComboBox QScrollBar::down-arrow:vertical,\n"
+"QComboBox QScrollBar::add-page:vertical,\n"
+"QComboBox QScrollBar::sub-page:vertical {\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"    width: 0px;\n"
+"}\n"
+"/* combo box*/\n"
+"/*qline*/\n"
+"QLineEdit{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    font-size:9pt;\n"
+"    padding-left:5px;\n"
+"    max-width:150px;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#C2C2C2;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"    border:1px solid #8274FF\n"
+"}\n"
+"/*qline*/\n"
+"/*qdate*/\n"
+"QDateEdit{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    padding-left:5px;\n"
+"}\n"
+"QDateEdit:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#C2C2C2;\n"
+"}\n"
+"QDateEdit:focus{\n"
+"    border:1px solid #8274FF\n"
+"}\n"
+"QDateEdit::up-button, QDateEdit::down-button {\n"
+"    width: 0px;\n"
+"    height: 0px;\n"
+"    border: none;\n"
+"}\n"
+"QDateEdit:drop-down{\n"
+"    border:0px;\n"
+"}\n"
+"QDateEdit:down-arrow{\n"
+"    image: url(:/icons/down-arrow_white.png);\n"
+"    width:12px;\n"
+"}\n"
+"/*qdate*/\n"
+"/*qspin*/\n"
+"QSpinBox{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    padding-left:5px;\n"
+"}\n"
+"QSpinBox:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#C2C2C2;\n"
+"}\n"
+"QSpinBox:focus{\n"
+"    border:1px solid #8274FF\n"
+"}\n"
+"QSpinBox::up-button, QSpinBox::down-button {\n"
+"    width: 0px;\n"
+"    height: 0px;\n"
+"    border: none;\n"
+"}\n"
+"/*qspin*/\n"
+"QPushButton{\n"
+"    padding-right:10px;\n"
+"    padding-left:10px;\n"
+"    height:40px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color:#8274FF;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.label.setStyleSheet("QLabel{\n"
+"    font-size:30px;\n"
+"    font-weight:bold;\n"
+"}")
+
+    def apply_dark_mode(self):
+        self.setStyleSheet("background-color: #111111;\n"
+"")
+        self.add_widget_edit.setStyleSheet("QWidget{\n"
+"    color:white;\n"
+"    font-size:9pt;\n"
+"    background-color:#202020;\n"
+"    border-radius:25px;\n"
+"}\n"
+"/* combo box*/\n"
+"QComboBox{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    padding-left:5px;\n"
+"}\n"
+"QComboBox:drop-down{\n"
+"    border:0px;\n"
+"}\n"
+"QComboBox:down-arrow{\n"
+"    image: url(:/newPrefix/edit_res/down-arrow.png);\n"
+"    width:12px;\n"
+"}\n"
+"QComboBox:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#3d3d3d;\n"
+"}\n"
+"QComboBox:focus{\n"
+"    border:1px solid #8274FF;\n"
+"}\n"
+"QComboBox:on{\n"
+"    border:1px solid #8274FF;\n"
+"}\n"
+"QComboBox QListView{\n"
+"    font-size:9px;\n"
+"    border:1px solid #8274FF;\n"
+"    padding:5px;\n"
+"    outline:none;\n"
+"    border-radius:5px;\n"
+"}\n"
+"QComboBox QListView:item{\n"
+"    padding-left:5px;\n"
+"    background-color: #FFFFFF;\n"
+"}\n"
+"QComboBox QListView:item:hover{\n"
+"    background-color: #202020;\n"
+"}\n"
+"QComboBox QScrollBar:vertical{\n"
+"    width:12px;\n"
+"    margin: 0px 0px 0px 0px;\n"
+"    border:none;\n"
+"    background:none;\n"
+"    background-color: #202020;\n"
+"}\n"
+"QComboBox QScrollBar:handle:vertical {\n"
+"    background-color: #8274FF;\n"
+"    border-radius:5px;\n"
+"    min-height:5px;\n"
+"}\n"
+"QComboBox QScrollBar::add-line:vertical,\n"
+"QComboBox QScrollBar::sub-line:vertical,\n"
+"QComboBox QScrollBar::up-arrow:vertical,\n"
+"QComboBox QScrollBar::down-arrow:vertical,\n"
+"QComboBox QScrollBar::add-page:vertical,\n"
+"QComboBox QScrollBar::sub-page:vertical {\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"    width: 0px;\n"
+"}\n"
+"/* combo box*/\n"
+"/*qline*/\n"
+"QLineEdit{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    font-size:9pt;\n"
+"    padding-left:5px;\n"
+"    max-width:150px;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#3d3d3d;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"    border:1px solid #8274FF\n"
+"}\n"
+"/*qline*/\n"
+"/*qdate*/\n"
+"QDateEdit{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    padding-left:5px;\n"
+"}\n"
+"QDateEdit:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#3d3d3d;\n"
+"}\n"
+"QDateEdit:focus{\n"
+"    border:1px solid #8274FF\n"
+"}\n"
+"QDateEdit::up-button, QDateEdit::down-button {\n"
+"    width: 0px;\n"
+"    height: 0px;\n"
+"    border: none;\n"
+"}\n"
+"QDateEdit:drop-down{\n"
+"    border:0px;\n"
+"}\n"
+"QDateEdit:down-arrow{\n"
+"    image: url(:/icons/down-arrow.png);\n"
+"    width:12px;\n"
+"}\n"
+"/*qdate*/\n"
+"/*qspin*/\n"
+"QSpinBox{\n"
+"    height:20px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"    padding-left:5px;\n"
+"}\n"
+"QSpinBox:hover{\n"
+"    border:2px solid #6A6B6C;\n"
+"    background-color:#3d3d3d;\n"
+"}\n"
+"QSpinBox:focus{\n"
+"    border:1px solid #8274FF\n"
+"}\n"
+"QSpinBox::up-button, QSpinBox::down-button {\n"
+"    width: 0px;\n"
+"    height: 0px;\n"
+"    border: none;\n"
+"}\n"
+"/*qspin*/\n"
+"QPushButton{\n"
+"    padding-right:10px;\n"
+"    padding-left:10px;\n"
+"    height:40px;\n"
+"    border:1px solid #6A6B6C;\n"
+"    border-radius:5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color:#8274FF;\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.label.setStyleSheet("QLabel{\n"
+"    font-size:30px;\n"
+"    font-weight:bold;\n"
+"}")
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     w = Login_window()
     # w = Main_window('user')
+    # w = Edit_window("light")
     w.show()
     app.exec()

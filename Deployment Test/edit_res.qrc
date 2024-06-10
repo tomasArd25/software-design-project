@@ -1,5 +1,5 @@
 <RCC>
   <qresource prefix="newPrefix">
-    <file>edit_res/down-arrow_white.png</file>
+    <file>edit_res/down-arrow.png</file>
   </qresource>
 </RCC>
